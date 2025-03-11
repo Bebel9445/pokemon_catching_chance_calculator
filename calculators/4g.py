@@ -1,4 +1,7 @@
 import random
+import locale
+
+locale.setlocale(locale.LC_ALL, "fr_FR.UTF-8")
 
 def calcul_a(pv:float, taux:int, bonus_ball:float, bonus_status:float):
     return (1 - 2/3 * pv) * taux * bonus_ball * bonus_status
@@ -25,7 +28,6 @@ def calculateur(pv:float, taux:int, bonus_ball:float, bonus_status:float):
         print(f"Proba de capture (sur {1000} essai(s)) : {test_capture(b, 1000) * 100} %")
     else:
         print(f"Proba de capture : 100 %")
-
 
 taux = int(input("Taux de capture : "))
 pv = eval(input("Taux de PV : "))
