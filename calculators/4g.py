@@ -1,7 +1,4 @@
 import random
-import locale
-
-locale.setlocale(locale.LC_ALL, "fr_FR.UTF-8")
 
 def calcul_a(pv:float, taux:int, bonus_ball:float, bonus_status:float):
     return (1 - 2/3 * pv) * taux * bonus_ball * bonus_status
